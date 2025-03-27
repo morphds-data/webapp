@@ -3,94 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba Moderna</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .header h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            margin-top: 20px;
-            transition: background 0.3s ease;
-        }
-
-        .button:hover {
-            background: #2980b9;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-            .card {
-                padding: 20px;
-            }
-        }
-    </style>
+    <title>Sección Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/admin-settings-male.png" type="image/png">
+    <link rel="stylesheet" href="seccion-admin.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Bienvenido a la Prueba Moderna</h1>
-            <p>Un diseño limpio y profesional para 2025</p>
-        </header>
+    <header class="header" id="header">
+        <div class="logo-container" id="logoContainer">
+            <img src="" alt="Logo de la empresa" id="companyLogo">
+        </div>
+        <div class="title-container" id="titleContainer">
+            <h1 id="companyTitle">Panel de Administrador</h1>
+        </div>
+        <div class="user-container" id="userContainer">
+            <div class="user-image" id="userImageContainer">
+                <img src="" alt="Imagen de usuario" id="userImage">
+            </div>
+            <span class="user-name" id="userName"></span>
+        </div>
+        <div class="date-container" id="dateContainer">
+            <span id="currentDate"></span>
+        </div>
+        <div class="notifications-container" id="notificationsContainer">
+            <i class="fas fa-bell bell" id="notificationBell"></i>
+        </div>
+    </header>
 
-        <main>
-            <section class="card">
-                <h2>Contenido de Prueba</h2>
-                <p>Este es un ejemplo de tarjeta con diseño moderno, sombras suaves y transiciones. Perfecto para cualquier proyecto profesional.</p>
-                <a href="#" class="button">Explorar Más</a>
-            </section>
+    <div class="container" id="mainContainer">
+        <nav class="sidebar" id="sidebar">
+            <h2 id="sidebarTitle">Módulos</h2>
+            <div class="sidebar-modules" id="sidebarModules">
+                <ul id="sidebarMenu">
+                    <li><a href="#" class="menu-item" id="implantsLink"><i class="fas fa-puzzle-piece"></i>Implantes</a></li>
+                    <li><a href="#" class="menu-item" id="consignmentLink"><i class="fas fa-puzzle-piece"></i>Consignación</a></li>
+                    <li><a href="#" class="menu-item" id="corporateLink"><i class="fas fa-puzzle-piece"></i>Corporativo</a></li>
+                    <li><a href="#" class="menu-item" id="laboratoryLink"><i class="fas fa-puzzle-piece"></i>Laboratorio</a></li>
+                    <li><a href="#" class="menu-item" id="benefitsLink"><i class="fas fa-puzzle-piece"></i>Prestaciones</a></li>
+                    <li><a href="#" class="menu-item" id="usersLink"><i class="fas fa-puzzle-piece"></i>Usuarios</a></li>
+                </ul>
+            </div>
+            <!-- Contenedores para cada módulo -->
+            <div class="sidebar-submodules" id="implantsSubmodules" style="display: none;">
+                <h2>Implantes</h2>
+                <ul>
+                    <li><a href="#" data-content="implants-form1">Opción 1</a></li>
+                    <li><a href="#" data-content="implants-form2">Opción 2</a></li>
+                    <li><a href="#" data-content="implants-form3">Opción 3</a></li>
+                    <li><a href="#" data-content="implants-form4">Opción 4</a></li>
+                    <li><a href="#" data-content="implants-form5">Opción 5</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-submodules" id="consignmentSubmodules" style="display: none;">
+                <h2>Consignación</h2>
+                <ul>
+                    <li><a href="#" data-content="consignment-form1">Opción 1</a></li>
+                    <li><a href="#" data-content="consignment-form2">Opción 2</a></li>
+                    <li><a href="#" data-content="consignment-form3">Opción 3</a></li>
+                    <li><a href="#" data-content="consignment-form4">Opción 4</a></li>
+                    <li><a href="#" data-content="consignment-form5">Opción 5</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-submodules" id="corporateSubmodules" style="display: none;">
+                <h2>Corporativo</h2>
+                <ul>
+                    <li><a href="#" data-content="corporate-form1">Opción 1</a></li>
+                    <li><a href="#" data-content="corporate-form2">Opción 2</a></li>
+                    <li><a href="#" data-content="corporate-form3">Opción 3</a></li>
+                    <li><a href="#" data-content="corporate-form4">Opción 4</a></li>
+                    <li><a href="#" data-content="corporate-form5">Opción 5</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-submodules" id="laboratorySubmodules" style="display: none;">
+                <h2>Laboratorio</h2>
+                <ul>
+                    <li><a href="#" data-content="laboratory-form1">Opción 1</a></li>
+                    <li><a href="#" data-content="laboratory-form2">Opción 2</a></li>
+                    <li><a href="#" data-content="laboratory-form3">Opción 3</a></li>
+                    <li><a href="#" data-content="laboratory-form4">Opción 4</a></li>
+                    <li><a href="#" data-content="laboratory-form5">Opción 5</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-submodules" id="benefitsSubmodules" style="display: none;">
+                <h2>Prestaciones</h2>
+                <ul>
+                    <li><a href="#" data-content="modulos/services-prest/empresas/empresas.html">Empresas</a></li>
+                    <li><a href="#" data-content="benefits-form2">Opción 2</a></li>
+                    <li><a href="#" data-content="benefits-form3">Opción 3</a></li>
+                    <li><a href="#" data-content="benefits-form4">Opción 4</a></li>
+                    <li><a href="#" data-content="benefits-form5">Opción 5</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-submodules" id="usersSubmodules" style="display: none;">
+                <h2>Usuarios</h2>
+                <ul>
+                    <li><a href="#" data-content="users-form1">Opción 1</a></li>
+                    <li><a href="#" data-content="users-form2">Opción 2</a></li>
+                    <li><a href="#" data-content="users-form3">Opción 3</a></li>
+                    <li><a href="#" data-content="users-form4">Opción 4</a></li>
+                    <li><a href="#" data-content="users-form5">Opción 5</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-middle" id="sidebarMiddle"></div>
+            <div class="sidebar-footer" id="sidebarFooter">Versión 1.0.0</div>
+        </nav>
+
+        <main class="main-content" id="mainContent">
+            <div class="content-placeholder" id="contentPlaceholder"></div>
         </main>
     </div>
+    <script src="seccion-admin.js"></script>
 </body>
 </html>
