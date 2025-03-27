@@ -120,6 +120,16 @@ body {
     font-weight: 500;
     margin-bottom: 20px;
     color: #1a202c;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0; /* Línea de división debajo del h2 */
+    padding-bottom: 10px; /* Espacio entre el texto y la línea */
+}
+
+.sidebar h2 i {
+    margin-right: 8px;
+    font-size: 1.2em;
+    color: #007bff;
 }
 
 .sidebar ul {
@@ -144,11 +154,16 @@ body {
 .sidebar ul li a i {
     margin-right: 8px;
     font-size: 1em;
+    color: #007bff;
 }
 
 .sidebar ul li a:hover {
     background: #edf2f7;
     color: #1a202c;
+}
+
+.sidebar ul li a:hover i {
+    color: #0056b3;
 }
 
 .sidebar-modules, .sidebar-submodules {
