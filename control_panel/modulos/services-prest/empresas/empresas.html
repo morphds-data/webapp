@@ -1,0 +1,52 @@
+<div class="empresas-container">
+    <h1 class="empresas-title">BD Empresas</h1>
+
+    <div class="empresas-form-container">
+        <form class="empresas-form">
+            <div class="form-group">
+                <label for="usuario-nombre">Nombre del usuario:</label>
+                <input type="text" id="usuario-nombre" name="usuario-nombre" autocomplete="off" disabled>
+            </div>
+            <div class="form-group">
+                <label for="empresa-nombre">Nombre de la empresa:</label>
+                <input type="text" id="empresa-nombre" name="empresa-nombre" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="empresa-rut">RUT de la empresa:</label>
+                <input type="text" id="empresa-rut" name="empresa-rut" autocomplete="off">
+            </div>
+            <button type="submit" class="empresas-button empresas-button-save">Guardar</button>
+        </form>
+    </div>
+
+    <div class="empresas-actions-container">
+        <button class="empresas-button empresas-button-import">Importar</button>
+        <button class="empresas-button empresas-button-excel">Descargar</button>
+    </div>
+
+    <div class="empresas-table-container">
+        <div class="table-wrapper">
+            <table class="empresas-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Acciones</th>
+                        <th>Nombre de la empresa</th>
+                        <th>RUT de la empresa</th>
+                        <th>Nombre del usuario</th>
+                        <th>Fecha de registro</th>
+                    </tr>
+                </thead>
+                <tbody id="empresas-table-body">
+                    <!-- Los datos se llenarán con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="empresas-pagination">
+            <button class="empresas-button pagination-button" id="prev-page" disabled>Anterior</button>
+            <span id="page-info">Página 1 de 1</span>
+            <button class="empresas-button pagination-button" id="next-page" disabled>Siguiente</button>
+        </div>
+    </div>
+</div>
